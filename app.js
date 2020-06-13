@@ -12,8 +12,7 @@ var d = new Date();
 console.log(getYear(d));
 
 // Takes the region selected from the dropdown menu on the webpage and assigns a unique id to the region
-let setRegion = document.getElementById("region").value
-setRegion = 'Africa'
+let setRegion = document.getElementById("region").option
 
 function region() {
     if(setRegion === 'Africa') {

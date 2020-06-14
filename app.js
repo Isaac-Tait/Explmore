@@ -9,10 +9,8 @@ function getYear(d) {
 };
 var d = new Date();
 
-console.log(getYear(d));
-
 // Takes the region selected from the dropdown menu on the webpage and assigns a unique id to the region
-let setRegion = document.getElementById("region").option
+let setRegion = document.getElementById("region").value
 
 function region() {
     if(setRegion === 'Africa') {
@@ -31,20 +29,17 @@ function region() {
         return "07"
     } else if(setRegion === 'Japan') {
         return "08"
-    } else if(setRegion === 'North and South Poles') {
+    } else if (setRegion === 'North and South Poles') {
         return "09"
-    }
-    return region()
+    } else return "Select a region please"
 };
-
-console.log(region())
 
 // Combines the year and the region and the users sequential four digit id together into a string
 // Adds the text "LTM" to the front of the unique ID number
-var id = "LTM" + getYear(d) + region() + Math.random().toString(10).slice(15)
+var id = "LTM" + getYear(d) + region() + Math.floor(10000 + Math.random() * 90000)
 
 console.log(id);
 
 // Returns the unique id to the webpage in the space "Your unique ID is: ____"
-document.getElementById('result').innerHTML = id
+const compileUniqueID = document.getElementById('result').innerHTML = id
 

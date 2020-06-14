@@ -9,38 +9,43 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <p>Welcome to <b>Explmore</b>! Please fill out the form below to unlock your personal access to the fastest growing community of adventurers, overlanders, and explores.</p>
         <form>
             <h3 for="region">Select Region</h3>
+                <b>Northern Hemisphere</b><br>
+                <input type="radio" name="region" required>
+                <label for="North America">North America</label><br>
+                <input type="radio" name="region">
+                <label for="Europe">Europe</label><br>
+                <input type="radio" name="region">
+                <label for="Russia">Russia</label><br>
+                <input type="radio" name="region">
+                <label for="Japan">Japan</label><br><br>
+                <b>Southern Hemisphere</b><br>
+                <input type="radio" name="region">
+                <label for="South America">South America</label><br>
+                <input type="radio" name="region">
+                <label for="Australia">Australia</label><br>
+                <input type="radio" name="region">
+                <label for="Africa">Africa</label><br><br>
+                <b>Globe Spanning</b><br>
+                <input type="radio" name="region">
+                <label for="Asia">Asia</label><br>
+                <input type="radio" name="region">
+                <label for="North and South Poles">North & South Poles</label><br>
 
-            <select name="region" id="region">
-                <option>-------Select-------</option>
-                <optgroup label="Northern Hemisphere">
-                    <option>North America</option>
-                    <option>Europe</option>
-                    <option>Russia</option>
-                    <option>Japan</option>
-                </optgroup>
-                <optgroup label="Southern Hemisphere">
-                    <option>South America</option>
-                    <option>Australia</option>
-                    <option>Africa</option>
-                </optgroup>
-                <optgroup label="Globe Spanning">
-                    <option>Asia</option>
-                    <option>North and South Poles</option>
-                </optgroup> 
-            </select><br><br>
+                <p>-----------------------------------</p>
 
                 <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <input type="text" id="fname" name="fname" required><br><br>
                 <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
+                <input type="text" id="lname" name="lname" required><br><br>
 
                 <input type="submit" value="Submit" onclick="compileUniqueID()">
         </form>
 
         <p>Your unique ID is: <span id="result"></span></p>
         
-        <script src="app.js" async defer></script>
+        <script src="app.js"></script>
     </body>
 </html>

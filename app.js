@@ -11,31 +11,32 @@ function compileUniqueID() {
     console.log(getYear());
 
     // Takes the region selected from the radio button menu in index.html and assigns a unique two digit number to the specific region.
-    let setRegion = document.getElementsByName("region").value
+    let setRegion = parseInt(document.getElementsByName("region").value)
     //setRegion = "North America"
-
+    
     let region = () => {
-        if(setRegion == "Africa") {
+        if(setRegion === "Africa") {
             return "01"
-        } else if(setRegion == "Asia") {
+        } else if(setRegion === "Asia") {
             return "02"
-        } else if(setRegion == "Australia") {
+        } else if(setRegion === "Australia") {
             return "03"
-        } else if(setRegion == "Europe") {
+        } else if(setRegion === "Europe") {
             return "04" 
-        } else if(setRegion == "North America") {
+        } else if(setRegion === "North America") {
             return "05"
-        } else if(setRegion == "South America") {
+        } else if(setRegion === "South America") {
             return "06"
-        } else if(setRegion == "Russia") {
+        } else if(setRegion === "Russia") {
             return "07"
-        } else if(setRegion == "Japan") {
+        } else if(setRegion === "Japan") {
             return "08"
-        } else if (setRegion == "North and South Poles") {
+        } else if (setRegion === "North and South Poles") {
             return "09"
-        } else return "Select a region please"
+        } else return "Select a region please" 
     };
     console.log(region())
+    console.log(setRegion);
 
     // Compiles the year and the region and the users randomly generated five digit id together into a string and appends the text "LTM" (Life Time Member) to the front of the unique ID number
     return "LTM" + getYear() + region() + Math.floor(10000 + Math.random() * 90000)

@@ -11,7 +11,7 @@ function compileUniqueID() {
     console.log(getYear());
 
     // Takes the region selected from the radio button menu in index.html and assigns a unique two digit number to the specific region.
-    let setRegion = parseInt(document.getElementsByName("region").value)
+    let setRegion = parseInt(document.getElementsByName('region').value)
     //setRegion = "North America"
     
     let region = () => {
@@ -35,8 +35,7 @@ function compileUniqueID() {
             return "09"
         } else return "Select a region please" 
     };
-    console.log(region())
-    console.log(setRegion);
+    console.log(region());
 
     // Compiles the year and the region and the users randomly generated five digit id together into a string and appends the text "LTM" (Life Time Member) to the front of the unique ID number
     return "LTM" + getYear() + region() + Math.floor(10000 + Math.random() * 90000)

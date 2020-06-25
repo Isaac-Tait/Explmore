@@ -12,25 +12,25 @@ function compileUniqueID() {
 
     // Takes the region selected from the radio button menu in index.html and assigns a unique two digit number to the specific region.
     let region = () => {
-        let setRegion = document.querySelectorAll('input[name="region"]');
+        let setRegion = document.querySelectorAll('input[name="region"]:checked');
         
-            if(setRegion.checked == "Africa") {
+            if(setRegion == "Africa") {
                 return "01"
-            } else if(setRegion.checked == "Asia") {
+            } else if(setRegion == "Asia") {
                 return "02"
-            } else if(setRegion.checked == "Australia") {
+            } else if(setRegion == "Australia") {
                 return "03"
-            } else if(setRegion.checked == "Europe") {
+            } else if(setRegion == "Europe") {
                 return "04" 
-            } else if(setRegion.checked == "North America") {
+            } else if(setRegion == "North America") {
                 return "05"
-            } else if(setRegion.checked == "South America") {
+            } else if(setRegion == "South America") {
                 return "06"
-            } else if(setRegion.checked == "Russia") {
+            } else if(setRegion == "Russia") {
                 return "07"
-            } else if(setRegion.checked == "Japan") {
+            } else if(setRegion == "Japan") {
                 return "08"
-            } else if (setRegion.checked == "North and South Poles") {
+            } else if (setRegion == "North and South Poles") {
                 return "09"
             } else return "Select a region please"; 
     };

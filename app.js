@@ -10,40 +10,37 @@ function compileUniqueID() {
     };
     console.log(getYear());
 
-    const btn = document.querySelector('#btn');
     // Takes the region selected from the radio button menu in index.html and assigns a unique two digit number to the specific region.
-    
-    btn.onclick = region = () => {
-        let setRegions = document.querySelectorAll('input[name="region"]')
+    let region = () => {
+        let setRegion = document.querySelectorAll('input[name="region"]');
         
-        for (const setRegion of setRegions) {
-            if(setRegion.checked === "Africa") {
+            if(setRegion.checked == "Africa") {
                 return "01"
-            } else if(setRegion.checked === "Asia") {
+            } else if(setRegion.checked == "Asia") {
                 return "02"
-            } else if(setRegion.checked === "Australia") {
+            } else if(setRegion.checked == "Australia") {
                 return "03"
-            } else if(setRegion.checked === "Europe") {
+            } else if(setRegion.checked == "Europe") {
                 return "04" 
-            } else if(setRegion.checked === "North America") {
+            } else if(setRegion.checked == "North America") {
                 return "05"
-            } else if(setRegion.checked === "South America") {
+            } else if(setRegion.checked == "South America") {
                 return "06"
-            } else if(setRegion.checked === "Russia") {
+            } else if(setRegion.checked == "Russia") {
                 return "07"
-            } else if(setRegion.checked === "Japan") {
+            } else if(setRegion.checked == "Japan") {
                 return "08"
-            } else if (setRegion.checked === "North and South Poles") {
+            } else if (setRegion.checked == "North and South Poles") {
                 return "09"
-            } else return "Select a region please" 
-        }
-        return region();
+            } else return "Select a region please"; 
     };
-    console.log(region);
+    console.log(region());
 
     // Compiles the year and the region and the users randomly generated five digit id together into a string and appends the text "LTM" (Life Time Member) to the front of the unique ID number
     return "LTM" + getYear() + region() + Math.floor(10000 + Math.random() * 90000)
 };
+
+console.log(compileUniqueID());
 
 // Returns the unique id to the webpage in the space "Your unique ID is: ____"
 document.getElementById('result').innerHTML = compileUniqueID();

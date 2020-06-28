@@ -1,0 +1,1 @@
+//  Try this: https://stanhub.com/how-to-store-checkbox-values-into-javascript-array-localstorage/
